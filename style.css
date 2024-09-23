@@ -1,0 +1,46 @@
+body{
+    background-color: pink;
+    margin: 0;
+}
+:root{
+    --cell-size:150px;
+    --mark-size:calc(var(--cell-size)* 0.9);
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+.game{
+    border: solid black 4px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,auto);
+}
+.cell{
+    
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border:solid white 2px;
+}
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3){
+    border-top: none;
+}
+.cell:nth-child(3n+1){
+    border-left: none;
+}
+.cell:nth-child(3n+3){
+    border-right: none;
+}
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8){
+    border-bottom: none;
+}
