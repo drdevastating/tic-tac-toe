@@ -7,13 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="overlay">
+        <h2>Enter the name of the Players</h2>
+        <label for="player1Input">Player 1:</label>
+        <input type="text" id="player1Input" required>
+        <label for="player2Input">Player 2:</label>
+        <input type="text" id="player2Input" required>
+        <button onclick="displayController.startGame()">Start Game</button>
+    </div>
     <div class="container">
         <div class="blank"></div>
         <div class="heading"></div>
         <div class="blank"></div>
         <div class="left-player"></div>
-        <div class="game">
-            <div class="cell" id="cell-1"></div>
+        <div class="game"> 
+            <div class="cell " id="cell-1"></div>
             <div class="cell" id="cell-2"></div>
             <div class="cell" id="cell-3"></div>
             <div class="cell" id="cell-4"></div>
@@ -27,6 +35,10 @@
         <div class="blank"></div>
         <div class="footer"></div>
         <div class="blank"></div>
+    </div>
+    <div class="winning-message" id="winning-message">
+        <div id="winning-message-text"></div>
+        <button id="restartButton">Restart</button>
     </div>
     <script src="script.js"></script>
 </body>
